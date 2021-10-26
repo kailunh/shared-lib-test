@@ -7,11 +7,11 @@ module.exports = {
   entry: "./src/index",
   mode: "development",
   devServer: {
-    port: 443,
+    port: 3002,
     contentBase: path.join(__dirname, "dist"),
   },
   output: {
-    publicPath: "https://shared-react-lib2.scm.azurewebsites.net/wwwroot/",
+    publicPath: "http://localhost:3002/",
   },
   module: {
     rules: [
@@ -33,7 +33,7 @@ module.exports = {
         "./SharedButton": "./src/SharedButton",
       },
       remotes: {
-        app1: "app1@https://shared-react-lib.scm.azurewebsites.net/wwwroot/remoteEntry.js",
+        app1: "app1@http://localhost:3001/remoteEntry.js",
       },
       shared: {
         react: { singleton: true },
