@@ -39,10 +39,6 @@ module.exports = {
       exposes: {
         "./ColorSlides": "./src/ColorSlides",
       },
-      remotes: {
-        app2: "app2@http://localhost:3002/remoteEntry.js",
-        // app2: "app2@https://shared-react-lib2.scm.azurewebsites.net/wwwroot/remoteEntry.js",
-      },
       shared: {
         react: { singleton: true },
         "react-dom": { singleton: true }
